@@ -1,0 +1,10 @@
+---
+- name: install packages for cinnamon desktop
+  package:
+    name: "{{ package }}"
+    state: present
+  loop:
+    - cinnamon
+    - nvidia-driver-545
+  loop_control:
+    loop_var: package
