@@ -5,6 +5,7 @@
     state: present
   loop:
     - cinnamon
-    - nvidia-driver-545
+    - dbus-x11
+    - "{{ gpu_graphics_driver_package }}"
   loop_control:
     loop_var: package
